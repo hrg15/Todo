@@ -3,17 +3,18 @@ import '../style.css';
 import { BiCheck } from "react-icons/bi";
 import { BiX } from "react-icons/bi";
 
-const Todos = ({text , date , completed }) => {
+const Todos = ({text , date , todo , setCompleted , deleteHandle }) => {
+    
     return (
         <div>
             <li className="todos">
-                <div className={`text ${completed ? "completed" : ""}`}>
+                <div className={`text ${todo.completed ? "completed" : ""}`}>
                 <h3>{text}</h3>
                 </div>
                 <div className="meta">
                     <p className="todo-date">{date}</p>
-                    <button> <BiCheck /> </button>
-                    <button><BiX /></button>
+                    <button onClick={()=>setCompleted(todo.key)}> <BiCheck /> </button>
+                    <button onClick={()=>deleteHandle(todo.key)}> <BiX /></button>
                 </div>
             </li>
         </div>

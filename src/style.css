@@ -33,13 +33,15 @@ body {
   flex-wrap: wrap;
   padding: 8px;
   border-radius: 10px;
-  margin: 15px;
+  margin-top: 15px;
+  margin-left: 4px;
   width: 500px;
   min-height: 100px;
   border: 2px solid #5D00A5;
 }
 .todos .text{
   word-wrap: break-word;
+  max-width: 100%;
 }
 .todos .completed{
   text-decoration: line-through;
@@ -128,4 +130,63 @@ body {
 }
 .purple{
   color: #B573FF;
+}
+.error{
+  color: #5D00A5;
+  font-size: 1.2rem;
+}
+
+/*? ========== Sidbare ============== */
+.sidebar{
+  position: absolute;
+  left: -355px;
+  top: 0;
+  width: 350px;
+  min-height: 100vh;
+  background: #000000;
+  padding: 8px;
+  border-right: 2px solid #5D00A5;
+  color: white;
+  transition: all 0.3s;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+.sidebar h1{
+  text-align: center;
+}
+.filter-todos ul{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 10px auto;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.filter-todos ul li:hover{
+cursor: pointer;
+}
+.filter-todos .active{
+  color: #B573FF;
+}
+.sidebar-list ul{
+  width: 100%;
+}
+.sidebar-list ul li{
+  width: 100%;
+}
+.toggle-sidebar{
+  position: absolute;
+  top: 50%;
+  left: 349px;
+  font-size: 1.7rem;
+  width: 40px;
+  height: 80px;
+  border: 2px solid #5D00A5;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 10px 0px 0px;
+}
+.sidebar-list .meta button{
+  color: white;
+}
+.display-sidebar{
+  left: 0;
 }
